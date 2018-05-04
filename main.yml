@@ -4,12 +4,13 @@
    roles:
     - docker
     - manager
+    - orquestrador
 
 
  - name: Configurando Workers
    hosts: docker_swarm_worker
-   roles:
-    - docker
-    - worker
+    roles:
+     - docker
+     - worker
 
 

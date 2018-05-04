@@ -7,7 +7,10 @@
    shell: hostname {{ inventory_hostname }}
 
  - name: Instalando a versão mais recente do Docker
-   shell: curl -sS https://get.docker.com | sh
+   #shell: curl -sS https://get.docker.com | sh
+   apt:
+    name: docker.io
+    update-cache: yes
 
  - name: Reiniciar o servico do Docker
    systemd:
